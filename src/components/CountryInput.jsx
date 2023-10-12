@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const CountryInput = () => {
-  return (
-    <div>CountryInput</div>
-  )
+function CountryInput({ onCountryChange }) {
+    const [country, setCountry] = useState('')
+
+    function handleChange(event) {
+        setCountry(event.target.value)
+        onCountryChange(event.target.value)
+    }
+
+    return (
+        <div>
+            <label>
+                Country:
+                <input type="text" value={country} onChange={handleChange} />
+            </label>
+        </div>
+    )
 }
 
-export default CountryInput
+export default CountryInput;
