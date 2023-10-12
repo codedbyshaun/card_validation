@@ -2,14 +2,14 @@ import React from 'react'
 
 function CardList({ cards }) {
 
-    function maskCardNumber(number) {
-        const len = number.length;
-        if (len >= 8) {
-            return number.slice(0, 4) + '*'.repeat(len - 8) + number.slice(len - 4);
-        } else {
-            return number;
-        }
-    }
+    // function maskCardNumber(number) {
+    //     const len = number.length;
+    //     if (len >= 8) {
+    //         return number.slice(0, 4) + '*'.repeat(len - 8) + number.slice(len - 4);
+    //     } else {
+    //         return number;
+    //     }
+    // }
 
     return (
         <div>
