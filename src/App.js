@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
     const [cards, setCards] = useState([])
-    const [bannedCountries, setBannedCountries] = useState([])
+    const [bannedCountries, setBannedCountries] = useState(['Iran', 'North Korea', 'Sudan', 'Syria'])
 
     // Load cards from sessionStorage when component mounts
     useEffect(() => {

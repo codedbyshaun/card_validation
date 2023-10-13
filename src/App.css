@@ -54,6 +54,10 @@ li {
   border-bottom: 1px solid rgb(221, 221, 221); 
 }
 
+li:last-child {
+  border-bottom: none; 
+}
+
 @media (max-width: 600px) {
   form {
       width: 80%;
