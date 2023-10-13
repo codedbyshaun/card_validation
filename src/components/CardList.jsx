@@ -20,6 +20,8 @@ function CardList({ cards }) {
                         Card Number: {(card.number)}
                         <br />
                         Country: {card.country}
+                        <br />
+                        Expiration Date: {card.expirationDate}
                     </li>
                 ))}
             </ul>
