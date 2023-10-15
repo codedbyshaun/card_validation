@@ -12,6 +12,7 @@ function CountryInput({ onCountryChange }) {
         <div>
             <label>
                 Country:
+                <br />
                 <input type="text" value={country} onChange={handleChange} />
             </label>
         </div>

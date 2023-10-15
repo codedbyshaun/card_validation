@@ -28,11 +28,25 @@ function App() {
   }
 
     return (
-      <div>
-          <h1>Credit Card Validation System</h1>
+      <div className='main'>
+          
+          <div className='input-container'>
+
+          <div className='hero'>
+          <h1>Card-o-matic Validation Panel</h1>
           <CardForm onCardSubmit={handleCardSubmit} bannedCountries={bannedCountries} />
+          
+
+          <div className='banned-countries'>
           <BannedCountries bannedCountries={bannedCountries} onBannedCountriesChange={setBannedCountries} />
+          </div>
+          </div>
+
+          </div>
+
+          <div className='valid-cards'>
           <CardList cards={cards} />
+          </div>
       </div>
   )
 

@@ -10,9 +10,10 @@ function ExpirationDateInput({ onExpirationDateChange }) {
 
 
     return (
-        <div>
+        <div className='expiration'>
             <label>
                 Card Expiration Date:
+                <br />
                 <input type="month" value={expirationDate} onChange={handleChange} />
             </label>
         </div>

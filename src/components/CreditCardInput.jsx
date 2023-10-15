@@ -47,6 +47,7 @@ function CreditCardInput({ onCardNumberChange }) {
         <div>
             <label>
                 Card Number:
+                <br />
                 <input type="text" value={cardNumber} onChange={handleChange} />
             </label>
             {errorMessage && <p>{errorMessage}</p>} {/* Display error message when it exists */}
