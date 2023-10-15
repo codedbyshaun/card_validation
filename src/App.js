@@ -22,33 +22,29 @@ function App() {
     }, [cards])
 
     function handleCardSubmit(card) {
-      if (!bannedCountries.includes(card.country) && !cards.some(c => c.number === card.number)) {
-          setCards([...cards, card])
-      }
-  }
+        if (!bannedCountries.includes(card.country) && !cards.some(c => c.number === card.number)) {
+            setCards([...cards, card])
+        }
+    }
 
     return (
-      <div className='main'>
-          
-          <div className='input-container'>
+        <div className='main'>
 
-          <div className='hero'>
-          <h1>Card-o-matic Validation Panel</h1>
-          <CardForm onCardSubmit={handleCardSubmit} bannedCountries={bannedCountries} />
-          
+            <div className='hero'>
+                <h1>Card-o-matic Validation Panel</h1>
+                <CardForm onCardSubmit={handleCardSubmit} bannedCountries={bannedCountries} />
 
-          <div className='banned-countries'>
-          <BannedCountries bannedCountries={bannedCountries} onBannedCountriesChange={setBannedCountries} />
-          </div>
-          </div>
 
-          </div>
+                <div className='banned-countries'>
+                    <BannedCountries bannedCountries={bannedCountries} onBannedCountriesChange={setBannedCountries} />
+                </div>
+            </div>
 
-          <div className='valid-cards'>
-          <CardList cards={cards} />
-          </div>
-      </div>
-  )
+            <div className='valid-cards'>
+                <CardList cards={cards} />
+            </div>
+        </div>
+    )
 
 }
 

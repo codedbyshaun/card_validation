@@ -22,12 +22,12 @@ function BannedCountries({ bannedCountries, onBannedCountriesChange }) {
                 {bannedCountries.map(country => (
                     <li key={country}>
                         {country}
-                        <button onClick={() => handleRemove(country)}>x</button>
+                        <button className='remove-button' onClick={() => handleRemove(country)}>x</button>
                     </li>
                 ))}
             </ul>
             <input type="text" value={newCountry} onChange={e => setNewCountry(e.target.value)} />
-            <button onClick={handleAdd}>Add Country</button>
+            <button className='add-button' onClick={handleAdd}>Add Country</button>
         </div>
     )
 }

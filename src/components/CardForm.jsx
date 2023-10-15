@@ -41,7 +41,7 @@ function CardForm({ onCardSubmit, bannedCountries }) {
             <CreditCardInput onCardNumberChange={setCardNumber} />
             <CountryInput onCountryChange={setCountry} />
             <ExpirationDateInput onExpirationDateChange={setExpirationDate} />
-            <button type="submit">Submit</button>
+            <button className='card-info-button' type="submit">Submit</button>
             {errorMessage && <p>{errorMessage}</p>} {/* Display the error message if it exists */}
         </form>
     );
