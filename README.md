@@ -15,7 +15,7 @@ The application maintains a list of countries banned from credit card purchases.
 
 ## Card List: 
 The application displays all valid credit cards that have been saved during the session. It does not allow duplicate cards to be added to the list.
-The state of the application is managed using React’s useState and useEffect hooks. The state is saved to sessionStorage for the duration of the session, and user inputs will remain saved until 
+The state of the application is managed using React’s useState and useEffect hooks. The state is saved to sessionStorage for the duration of the session, and accepted user inputs will remain saved until 
 the page is refreshed.
 
 ## Security:
