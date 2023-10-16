@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Credit Card Validation System
+This project is a React application that allows admins to submit credit card numbers for validation. The application has the following features:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Credit Card Input: 
+Users can input credit card numbers. The application determines if the input number is a real credit card number using the Luhn algorithm and checks if the card number length is between 13 and 16 digits.
 
-## Available Scripts
+## Country Input: 
+Users can input the country of origin for the credit card. The application checks if the country is in a list of banned countries.
 
-In the project directory, you can run:
+## Expiration Date Input:
+Users can input the expiration date of the credit card. The application checks if the card has already expired.
 
-### `npm start`
+## Banned Countries: 
+The application maintains a list of countries banned from credit card purchases. Users can add or remove countries from this list.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Card List: 
+The application displays all valid credit cards that have been saved during the session. It does not allow duplicate cards to be added to the list.
+The state of the application is managed using React’s useState and useEffect hooks. The state is saved to sessionStorage for the duration of the session, and accepted user inputs will remain saved until 
+the page is refreshed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Security:
+In a real world application, for safety and data protection reasons, a system such as this would be handled by trusted 3rd party software. For the scope of this project, it is unnecessary.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
+To install this project, clone the repository and run npm install to install all dependencies. Then run npm start to start the development server.
 
-### `npm run build`
+## Important - Usage
+To use this application, enter a credit card number, select a country, and enter an expiration date. Click “Submit” to add the card to the list of valid cards. If the card is invalid, the date has expired, or if it’s from a banned country, an error message will be displayed. Only valid credit card numbers will be accepted. For the reason of safety and privacy, please do not use your real card information. For the purposes of this assignment, I tested the application with a list of testing-specific credit card numbers from PayPal (https://www.paypalobjects.com/en_AU/vhelp/paypalmanager_help/credit_card_numbers.html). Any country and date may be chosen at random. For your convenience, please select one of the numbers from the list below to use as input:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+378282246310005
+	
+371449635398431
+	
+378734493671000
+	
+5610591081018250
+	
+30569309025904
+	
+38520000023237
+	
+6011111111111117
+	
+6011000990139424
+	
+3530111333300000
+	
+3566002020360505
+	
+5555555555554444
+	
+5105105105105100
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To add a country to the banned list, enter the country name in the “Banned Countries” section and click “Add”. To remove a country from the banned list, click “Remove” next to the country name.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contributing:
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+MIT
