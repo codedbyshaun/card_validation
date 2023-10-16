@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function CountryInput({ onCountryChange }) {
     const [country, setCountry] = useState('')
@@ -7,6 +7,10 @@ function CountryInput({ onCountryChange }) {
         setCountry(event.target.value)
         onCountryChange(event.target.value)
     }
+
+    useEffect(() => {
+        setCountry('')
+    }, [onCountryChange])
 
     return (
         <div>

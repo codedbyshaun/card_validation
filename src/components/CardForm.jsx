@@ -8,13 +8,17 @@ function CardForm({ onCardSubmit, bannedCountries }) {
     const [country, setCountry] = useState('')
     const [expirationDate, setExpirationDate] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
+    const [key, setKey] = useState(Date.now())
 
     function isExpired(date) {
         const today = new Date()
-        const month = today.getMonth() + 1 // getMonth() returns month index starting from 0
-        const year = today.getFullYear()
-        const [expYear, expMonth] = date.split('-').map(Number)
-        return expYear < year || (expYear === year && expMonth < month)
+        const expiryDate = new Date(date)
+
+        // Set hours, minutes, seconds and milliseconds to 0 for accurate comparison
+        today.setHours(0, 0, 0, 0);
+        expiryDate.setHours(0, 0, 0, 0);
+
+        return expiryDate < today;
     }
 
     function handleSubmit(event) {
@@ -23,7 +27,7 @@ function CardForm({ onCardSubmit, bannedCountries }) {
             setErrorMessage('This country is banned')
             return;
         }
-        if (isExpired(expirationDate)) { 
+        if (isExpired(expirationDate)) {
             setErrorMessage('This card is expired')
             return;
         }
@@ -32,12 +36,15 @@ function CardForm({ onCardSubmit, bannedCountries }) {
             setCardNumber('')
             setCountry('')
             setExpirationDate('')
-            setErrorMessage('') 
+            setErrorMessage('')
+            setKey(Date.now())
+        } else {
+            setErrorMessage('Please fill in all the fields')
         }
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} key={key}>
             <CreditCardInput onCardNumberChange={setCardNumber} />
             <CountryInput onCountryChange={setCountry} />
             <ExpirationDateInput onExpirationDateChange={setExpirationDate} />

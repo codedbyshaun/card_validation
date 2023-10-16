@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function luhnCheck(num) {
     let arr = (num + '')
@@ -43,6 +43,10 @@ function CreditCardInput({ onCardNumberChange }) {
         }
     }
 
+    useEffect(() => {
+        setCardNumber('')
+    }, [onCardNumberChange])
+
     return (
         <div>
             <label>
@@ -50,7 +54,7 @@ function CreditCardInput({ onCardNumberChange }) {
                 <br />
                 <input type="text" value={cardNumber} onChange={handleChange} />
             </label>
-            {errorMessage && <p>{errorMessage}</p>} {/* Display error message when it exists */}
+            {errorMessage && <p>{errorMessage}</p>} {/* Display error message if it exists */}
         </div>
     )
 }

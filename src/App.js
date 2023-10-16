@@ -22,8 +22,11 @@ function App() {
     }, [cards])
 
     function handleCardSubmit(card) {
-        if (!bannedCountries.includes(card.country) && !cards.some(c => c.number === card.number)) {
-            setCards([...cards, card])
+        if (!bannedCountries.includes(card.country)) {
+            const cardExists = cards.some(c => c.number === card.number)
+            if (!cardExists) {
+                setCards([...cards, card])
+            }
         }
     }
 

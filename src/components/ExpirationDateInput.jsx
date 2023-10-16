@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function ExpirationDateInput({ onExpirationDateChange }) {
     const [expirationDate, setExpirationDate] = useState('')
@@ -8,6 +8,9 @@ function ExpirationDateInput({ onExpirationDateChange }) {
         onExpirationDateChange(event.target.value)
     }
 
+    useEffect(() => {
+        setExpirationDate('')
+    }, [onExpirationDateChange])
 
     return (
         <div className='expiration'>

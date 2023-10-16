@@ -8,7 +8,7 @@
   --primary-color: rgb(60, 50, 245);
   --secondary-color: rgb(131, 86, 254);
   --tertiary-color: rgba(0, 212, 255, 1);
-  --text-color: rgb(10, 0, 54);
+  --text-color: rgb(69, 69, 76);
 }
 
 body {
@@ -27,7 +27,8 @@ h1 {
 }
 
 h2 {
-  color: rgb(223, 220, 220);;
+  color: rgb(223, 220, 220);
+  ;
   text-align: center;
 }
 
@@ -41,7 +42,7 @@ form {
 
 label {
   font-weight: 600;
-  color:rgb(210, 233, 245);
+  color: rgb(210, 233, 245);
 }
 
 input,
@@ -99,7 +100,7 @@ li:last-child {
   align-items: center;
   padding: 10px;
   background: rgb(12, 4, 153);
-  background: linear-gradient(90deg, rgb(5, 1, 86) 0%, rgba(16, 0, 57, 0.962) 100%, rgba(0, 212, 255, 1) 100%);                              
+  background: linear-gradient(90deg, rgb(5, 1, 86) 0%, rgba(16, 0, 57, 0.962) 100%, rgba(0, 212, 255, 1) 100%);
 }
 
 .hero input {
@@ -108,14 +109,14 @@ li:last-child {
 }
 
 .input-container {
- display: block;
- height: auto;
- width: 600px;
+  display: block;
+  height: auto;
+  width: 600px;
 }
 
 .card-info-button {
   font-weight: 700;
-  color:rgb(2, 0, 36);
+  color: rgb(2, 0, 36);
   background-color: rgb(255, 255, 255);
 }
 
@@ -140,8 +141,9 @@ li:last-child {
 
 .banned-countries li {
   height: 20px;
-  width: 200px;;
-  color: rgb(244, 87, 87);  
+  width: 200px;
+  ;
+  color: rgb(244, 87, 87);
   border: none;
 }
 
@@ -153,13 +155,14 @@ li:last-child {
 .banned-countries input {
   height: 10px;
   width: 100px;
-  color: rgb(244, 87, 87); 
+  color: rgb(244, 87, 87);
   background-color: rgba(248, 248, 249, 0.181);
 }
 
 .banned-countries button {
   color: var(--text-color);
-  background-color: rgb(173, 170, 231);
+  font-weight: 700;
+  background-color: rgb(252, 252, 252);
 }
 
 .banned-countries button:hover {
@@ -183,7 +186,7 @@ li:last-child {
   align-items: center;
   /* background-color: var(--primary-color); */
   background: rgb(16, 0, 57);
-  background: linear-gradient(90deg, rgba(17, 1, 55, 0.958) 0%, rgb(29, 23, 135) 100%, rgb(22, 11, 241) 100%); 
+  background: linear-gradient(90deg, rgba(17, 1, 55, 0.958) 0%, rgb(29, 23, 135) 100%, rgb(22, 11, 241) 100%);
 }
 
 .valid-cards li {
